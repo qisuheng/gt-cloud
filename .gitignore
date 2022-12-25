@@ -1,0 +1,3 @@
+# Project exclude paths
+/gt-base/target/
+/gt-monitor/target/

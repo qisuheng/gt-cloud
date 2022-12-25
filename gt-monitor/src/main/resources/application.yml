@@ -1,0 +1,48 @@
+server:
+  port: 9111
+
+spring:
+  application:
+    name: gt-monitor
+  security:
+    user:
+      name: admin
+      password: 123456
+      roles: ADMIN
+  mail:
+    host: smtp.qq.com
+    username: suhengqi@foxmail.com
+    password: pnwfbtoqtoyrbebb
+    default-encoding: UTF-8
+  boot:
+    admin:
+      ui:
+        title: GT监控中心
+      client:
+        instance:
+          metadata:
+            tags:
+              environment: local
+      notify:
+        mail:
+          to: 1323545940@qq.com
+          from: suhengqi@foxmail.com
+      discovery:
+        ignored-services: ${spring.application.name}
+  cloud:
+    nacos:
+      discovery:
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}
+        server-addr: @config.server-addr@
+
+# 服务端点检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
