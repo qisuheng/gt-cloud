@@ -25,7 +25,7 @@
 
     <properties>
         <!-- 系统版本 -->
-        <crystal.version>1.0-SNAPSHOT</crystal.version>
+        <gt.version>1.0-SNAPSHOT</gt.version>
         <!-- jdk 版本 -->
         <java.version>17</java.version>
         <!-- spring cloud 版本 -->
@@ -34,7 +34,21 @@
         <spring-cloud-alibaba.version>2022.0.0.0-RC1</spring-cloud-alibaba.version>
         <!-- spring admin 监控版本-->
         <spring-boot-admin.version>3.0.0-M7</spring-boot-admin.version>
+        <!-- hutool 工具版本 -->
+        <hutool.version>5.8.10</hutool.version>
+        <!-- commons-beanutils 工具类版本 -->
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <!-- Swagger 版本 -->
+        <knife4j-spring-boot-starter.version>3.0.3</knife4j-spring-boot-starter.version>
     </properties>
+
+    <dependencies>
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -54,6 +68,18 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- hutool工具类-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!-- commons-beanutils -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
