@@ -6,10 +6,6 @@ spring:
     name: gt-gateway
   main:
     allow-circular-references: true
-  boot:
-    admin:
-      client:
-        url: localhost:9111
   config:
     import:
       - optional:nacos:${spring.application.name}-@profile.name@.yaml
