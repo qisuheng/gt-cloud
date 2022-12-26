@@ -21,6 +21,7 @@
         <module>gt-base</module>
         <module>gt-monitor</module>
         <module>gt-gateway</module>
+        <module>gt-system</module>
     </modules>
 
     <properties>
